@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Anniversary & wishes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+  <div class="background">
+    <div class="hearts"></div>
+  </div>
+
+  <div class="card">
+    <h1 class="glow">🎂 Happy Anniversary! Maa and Baba 🎂</h1>
+    <p class="message">Wishing you a day full of joy, smiles, and unforgettable memories! 🎈<br>"Tap Anywhere in your screen first!"</p>
+
+
+
+    <input type="checkbox" id="toggle" hidden>
+    <label for="toggle" class="button"><a style="text-decoration: none;" href="latter/index1.html">💌 Click for a
+        Surprise!</a></label>
+    <div class="heart-container">
+      <!-- Generate multiple hearts -->
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+    </div>
+    <!-- <audio hidden id="musicplayer" controls autoplay>
+      <source src="piano_1.mp3" />
+    </audio> -->
+  </div>
+  <!-- <audio id="musicplayer" preload="auto">
+    <source src="piano_1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <script>
+    // Play audio on any interaction
+    document.addEventListener('click', function () {
+      const audio = document.getElementById('musicplayer');
+      if (audio.paused) {
+        audio.play().catch((e) => console.log("Autoplay failed", e));
+      }
+    }, { once: true }); // only run once
+  </script>
+   -->
+   <div>
+    <img src="picture.jpg" alt="pic" class="responsive-image">
+  </div>
+
+  <audio id="musicplayer" preload="auto">
+    <source src="piano_1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    window.addEventListener('load', function () {
+      const audio = document.getElementById('musicplayer');
+
+      // Try autoplay (some browsers may allow it)
+      audio.play().catch(() => {
+        // If autoplay fails, wait for user interaction
+        const resumeAudio = () => {
+          audio.play().catch(e => console.log("Autoplay blocked:", e));
+          document.removeEventListener('click', resumeAudio);
+        };
+        document.addEventListener('click', resumeAudio);
+      });
+    });
+  </script>
+
+
+
+</body>
+
+</html>
